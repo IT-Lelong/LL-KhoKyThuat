@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toggleservice"
+        android:title="@string/switchDes"
+        app:actionViewClass="android.widget.Switch"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/update_data"
+        android:icon="@drawable/mo_update"
+        android:title="@string/option01"
+        android:tooltipText="@string/option01"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/save_data"
+        android:icon="@drawable/mo_save"
+        android:title="@string/option02"
+        android:tooltipText="@string/option02"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/clear_data"
+        android:title="@string/option03" />
+
+
+</menu>

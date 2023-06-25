@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/asfi511_menu"
+        android:title="@string/asfi511_menu"
+        android:visible="false"></item>
+
+    <item
+        android:id="@+id/aimt324_menu"
+        android:title="@string/aimt324_menu"
+        android:visible="false"></item>
+
+    <item
+        android:id="@+id/aimt301_menu"
+        android:title="@string/aimt301_menu"
+        android:visible="true"></item>
+
+    <item
+        android:id="@+id/check_goods"
+        android:title="@string/check_goods"
+        android:visible="false"></item>
+</menu>
