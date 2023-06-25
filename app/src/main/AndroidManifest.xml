@@ -27,9 +27,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
-        <activity
-            android:name=".qr211"
-            android:exported="false" />
+
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -41,6 +39,10 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -50,10 +52,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Menu"
             android:exported="false"
             android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".QR210.Main.qr210_check" />
+
+        <activity
+            android:name=".QR210.Main.qr210"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".QR210.Main.qr210_vt_view"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".QR211.qr211"
+            android:exported="false" />
     </application>
 
 </manifest>

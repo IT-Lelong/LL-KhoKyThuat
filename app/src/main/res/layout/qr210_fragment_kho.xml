@@ -160,7 +160,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:background="@drawable/qr210_button_custom"
+            android:background="@drawable/button_type_nomal_midnight"
             android:text="@string/btnCancel"
             android:textColor="#FFFFFF"
             android:textSize="20sp"/>
@@ -176,7 +176,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:background="@drawable/qr210_button_custom"
+            android:background="@drawable/button_type_nomal_midnight"
             android:text="@string/btnConfirm"
             android:textColor="#FFFFFF"
             android:textSize="20sp"/>

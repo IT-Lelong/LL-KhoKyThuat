@@ -22,7 +22,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:text="@string/M17"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/MidnightGreen"
         android:textSize="30sp"
         android:gravity="center"
         android:textStyle="italic|bold" />
@@ -43,8 +43,9 @@
 
         <SurfaceView
             android:id="@+id/suvqr210_upload"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -57,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <TextView
@@ -102,7 +104,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/qr210_button_custom"
+            android:background="@drawable/button_type_nomal_midnight"
             android:layout_gravity="center"
             android:textColor="#FFFFFF"
             android:text="@string/btnCancel" />
@@ -118,7 +120,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/qr210_button_custom"
+            android:background="@drawable/button_type_nomal_midnight"
             android:layout_gravity="center"
             android:textColor="#FFFFFF"
             android:text="@string/btnConfirm" />

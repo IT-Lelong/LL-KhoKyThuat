@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="#41A5E9"
     android:id="@+id/LnMain"
-    tools:context="com.example.QR210.Main.qr210_aimt301_asfi511">
+    tools:context=".QR210.Main.qr210">
 
     <LinearLayout
         android:id="@+id/ln1"
@@ -100,7 +100,7 @@
                             android:text="@string/M22"
                             android:textColor="#FFFFFF"
                             android:layout_margin="0dp"
-                            android:background="@drawable/qr210_button_custom"
+                            android:background="@drawable/button_type_nomal_midnight"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -196,18 +196,6 @@
                 android:text="@string/qr210_col01"
                 style="@style/title" />
 
-           /* TextView
-                android:id="@+id/qr210_col02"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_weight="2"
-                android:background="#3F51B5"
-                android:gravity="center"
-                android:text="@string/qr210_col02"
-                android:textColor="#FFFFFF"
-                android:textSize="23sp" */
 
             <TextView
                 android:id="@+id/qr210_col03"
