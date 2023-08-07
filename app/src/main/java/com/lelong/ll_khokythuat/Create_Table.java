@@ -7,38 +7,24 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 public class Create_Table {
-/*
+
     private Context mCtx = null;
     String DATABASE_NAME = "MainDB.db";
     public SQLiteDatabase db = null;
 
-    String TABLE_NAME_TC_FAB = "tc_fab_file";
-    String tc_fab001 = "tc_fab001"; //Mã hạng mục
-    String tc_fab002 = "tc_fab002"; //Mã báo biểu
-    String tc_fab003 = "tc_fab003"; //Mã hạng mục chi tiết
-    String tc_fab004 = "tc_fab004"; //Mã tổng
+    //thiết lập dữ liệu xưởng
+    String TB_setup_data_file = "setup_data_file";
+    String setup01 = "setup01"; //Kho
 
-    String TABLE_NAME_TC_FAC = "tc_fac_file";
-    String tc_fac001 = "tc_fac001"; //Mã hạng mục
-    String tc_fac002 = "tc_fac002"; //Mã báo biểu
-    String tc_fac003 = "tc_fac003"; //Mã hạng mục chi tiết
-    String tc_fac004 = "tc_fac004"; //Mã tổng
-    String tc_fac005 = "tc_fac005"; //tên tiếng hoa
-    String tc_fac006 = "tc_fac006"; //tên tiếng việt
-    String tc_fac007 = "tc_fac007"; //Điểm số
-    String tc_fac008 = "tc_fac008"; //Hãng sản xuất
-    String tc_fac011 = "tc_fac011"; //Dãy đo thiết bị
+    String TB_basic_data_file = "basic_data_file";
+    String basic01 = "basic01"; //Kho
+    String basic02 = "basic02"; //Vị trí lưu
 
+    String CREATE_TB_setup_data_file = "CREATE TABLE IF NOT EXISTS " + TB_setup_data_file + " ("
+            + setup01 + " TEXT)";
 
-    String CREATE_TABLE_FAB = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME_TC_FAB + " ("
-            + tc_fab001 + " TEXT," + tc_fab002 + " TEXT,"
-            + tc_fab003 + " TEXT," + tc_fab004 + " TEXT)";
-
-    String CREATE_TABLE_FAC = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME_TC_FAC + " ("
-            + tc_fac001 + " TEXT," + tc_fac002 + " TEXT," + tc_fac003 + " TEXT,"
-            + tc_fac004 + " TEXT," + tc_fac005 + " TEXT," + tc_fac006 + " TEXT,"
-            + tc_fac007 + " TEXT," + tc_fac008 + " TEXT," + tc_fac011 + " TEXT )";
-
+    String CREATE_TB_basic_data_file = "CREATE TABLE IF NOT EXISTS " + TB_basic_data_file + " ("
+            + basic01 + " TEXT," + basic02 + " TEXT )";
 
     public Create_Table(Context ctx) {
         this.mCtx = ctx;
@@ -47,80 +33,85 @@ public class Create_Table {
     public void open() throws SQLException {
         db = mCtx.openOrCreateDatabase(DATABASE_NAME, 0, null);
         try {
-            db.execSQL(CREATE_TABLE_FAB);
-            db.execSQL(CREATE_TABLE_FAC);
+            db.execSQL(CREATE_TB_setup_data_file);
+            db.execSQL(CREATE_TB_basic_data_file);
         } catch (Exception e) {
 
+        }
+    }
+    //Kho
+    public String insSetup_data(String g_setup01) {
+        try {
+            ContentValues args = new ContentValues();
+            args.put(setup01, g_setup01);
+            db.insert(TB_setup_data_file, null, args);
+            return "TRUE";
+        } catch (Exception e) {
+            return "FALSE";
+        }
+    }
+    //Kho + v.tri
+    public String insBasic_data(String g_basic01,String g_basic02) {
+        try {
+            ContentValues args = new ContentValues();
+            args.put(basic01, g_basic01);
+            args.put(basic02, g_basic02);
+            db.insert(TB_basic_data_file, null, args);
+            return "TRUE";
+        } catch (Exception e) {
+            return "FALSE";
         }
     }
 
     public void close() {
         try {
-            String DROP_TABLE_TC_FAB = "DROP TABLE IF EXISTS " + TABLE_NAME_TC_FAB;
-            String DROP_TABLE_TC_FAC = "DROP TABLE IF EXISTS " + TABLE_NAME_TC_FAC;
-            db.execSQL(DROP_TABLE_TC_FAB);
-            db.execSQL(DROP_TABLE_TC_FAC);
+            String DROP_TABLE_TB_setup_data_file = "DROP TABLE IF EXISTS " + TB_setup_data_file;
+            db.execSQL(DROP_TABLE_TB_setup_data_file);
+            String DROP_TABLE_TB_basic_data_file = "DROP TABLE IF EXISTS " + TB_basic_data_file;
+            db.execSQL(DROP_TABLE_TB_basic_data_file);
             db.close();
         } catch (Exception e) {
 
         }
     }
 
-    public String append(String g_tc_fab001, String g_tc_fab002, String g_tc_fab003, String g_tc_fab004) {
-        try {
-            ContentValues args = new ContentValues();
-            args.put(tc_fab001, g_tc_fab001);
-            args.put(tc_fab002, g_tc_fab002);
-            args.put(tc_fab003, g_tc_fab003);
-            args.put(tc_fab004, g_tc_fab004);
-            db.insert(TABLE_NAME_TC_FAB, null, args);
-            return "TRUE";
-        } catch (Exception e) {
-            return "FALSE";
-        }
+    //del setup_file trên máy
+    public void del_setup() {
+        db.execSQL("delete from " + TB_setup_data_file);
     }
 
-    public String append(String g_tc_fac001, String g_tc_fac002, String g_tc_fac003,
-                       String g_tc_fac004, String g_tc_fac005, String g_tc_fac006,
-                       String g_tc_fac007, String g_tc_fac008, String g_tc_fac011) {
-        try {
-            ContentValues args = new ContentValues();
-            args.put(tc_fac001, g_tc_fac001);
-            args.put(tc_fac002, g_tc_fac002);
-            args.put(tc_fac003, g_tc_fac003);
-            args.put(tc_fac004, g_tc_fac004);
-            args.put(tc_fac005, g_tc_fac005);
-            args.put(tc_fac006, g_tc_fac006);
-            args.put(tc_fac007, g_tc_fac007);
-            args.put(tc_fac008, g_tc_fac008);
-            args.put(tc_fac011, g_tc_fac011);
-            db.insert(TABLE_NAME_TC_FAC, null, args);
-            return "TRUE";
-        } catch (Exception e) {
-            return "FALSE";
-        }
-
+    //del basic_file trên máy
+    public void del_basic() {
+        db.execSQL("delete from " + TB_basic_data_file);
     }
 
-    public void delete_table() {
-        db.delete(TABLE_NAME_TC_FAB, null  , null);
-        db.delete(TABLE_NAME_TC_FAC, null  , null);
-    }
-
-    public Cursor getAll_tc_fab() {
+    //kiểm tra dữ liệu show lên dialog
+    public Cursor getAll_setup_01() {
         Cursor a;
         try {
-            //a  = db.query(TABLE_NAME_TC_FAB, new String[]{"rowid _id", tc_fab001,tc_fab002,tc_fab003,tc_fab004}
-            //      , null, null, null, null, tc_fab002 + " DESC", null) ;
-            // a = db.rawQuery("SELECT * FROM " + TABLE_NAME_TC_FAB + " WHERE tc_fab001='KT01'", null);
 
             //SQLiteDatabase db = this.getWritableDatabase();
-            String selectQuery = "SELECT * FROM " + TABLE_NAME_TC_FAB + " WHERE tc_fab001='KT01'";
+            String selectQuery = "SELECT distinct setup01 FROM setup_data_file ORDER BY 1";
             return db.rawQuery(selectQuery, null);
 
         } catch (Exception e) {
             return null;
         }
     }
-*/
+
+    //Lấy dữ liệu show lên stand
+    public Cursor getAll_stand_01(String l_kho) {
+        Cursor a;
+        try {
+
+            //SQLiteDatabase db = this.getWritableDatabase();
+            String selectQuery = "SELECT basic02 FROM basic_data_file WHERE basic01='" + l_kho + "'  ORDER BY 1";
+            return db.rawQuery(selectQuery, null);
+
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+
 }

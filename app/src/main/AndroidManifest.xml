@@ -27,7 +27,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
-
+        
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -52,25 +52,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Menu"
             android:exported="false"
             android:screenOrientation="fullSensor" />
-
-        <activity
-            android:name=".QR210.Main.qr210_check" />
-
+        <activity android:name=".QR210.Main.qr210_check" />
         <activity
             android:name=".QR210.Main.qr210"
             android:screenOrientation="fullSensor" />
-
         <activity
             android:name=".QR210.Main.qr210_vt_view"
             android:screenOrientation="fullSensor" />
-
         <activity
             android:name=".QR211.qr211"
+            android:exported="false" />
+        <activity
+            android:name=".QR211.qr211_search"
+            android:exported="false" />
+        <activity
+            android:name=".QR211.qr211_show_data1"
+            android:exported="false" />
+        <activity
+            android:name=".QR211.qr211_search2"
             android:exported="false" />
     </application>
 

@@ -148,5 +148,20 @@
 
     /*QR211 (S)*/
     <string name="btnQR211">Tra cứu dữ liệu kho Kỹ Thuật (QR211)</string>
+    <string name="btn211_1">Tra cứu chi tiết</string>
+    <string name="btn211_2">Tra cứu</string>
+    <string name="btn211_conf">Xác nhận</string>
+    <string name="tt_diaxuong">Kho</string>
+
+    <string name="r211_ds">Danh sách</string>
+    <string name="r211_stt">Stt</string>
+    <string name="r211_kho">Kho</string>
+    <string name="r211_vtri">Vị trí</string>
+    <string name="r211_mvl">Mã VL</string>
+    <string name="r211_antoan">Lượng an toàn</string>
+    <string name="r211_sl">Tồn kho</string>
+
+    <string name="r211_btn1">Tra tìm</string>
+
 
 </resources>

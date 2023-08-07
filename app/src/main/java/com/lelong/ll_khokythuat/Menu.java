@@ -36,6 +36,7 @@ public class Menu extends AppCompatActivity {
     String ID;
     Locale locale;
     private CheckAppUpdate checkAppUpdate = null;
+    String g_server = "PHP";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,6 +148,10 @@ public class Menu extends AppCompatActivity {
                 case R.id.btn_QR211: {
                     Intent QR211 = new Intent();
                     QR211.setClass(Menu.this, qr211.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("ID", ID);
+                    bundle.putString("SERVER", g_server);
+                    QR211.putExtras(bundle);
                     startActivity(QR211);
                     break;
                 }

@@ -146,4 +146,20 @@
 
     /*QR211*/
     <string name="btnQR211">技術倉資料查詢 (QR211)</string>
+    <string name="btn211_1">明細資料查詢</string>
+    <string name="btn211_2">查詢</string>
+    <string name="btn211_conf">確認</string>
+    <string name="tt_diaxuong">倉庫</string>
+
+    <string name="r211_ds">清單</string>
+    <string name="r211_stt">項次</string>
+    <string name="r211_kho">倉庫</string>
+    <string name="r211_vtri">位置</string>
+    <string name="r211_mvl">物料</string>
+    <string name="r211_antoan">安全量</string>
+    <string name="r211_sl">庫存量</string>
+
+    <string name="r211_btn1">查詢</string>
+
+
 </resources>
