@@ -123,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        editID.requestFocus();
     }
 
     // Storage Permissions (S)

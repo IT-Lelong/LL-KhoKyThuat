@@ -95,7 +95,7 @@
     <string name="qr210_col01">STT</string>
     <string name="qr210_col02">MVL</string>
     <string name="qr210_col03">MVL-Tên SP\nQuy cách</string>
-    <string name="qr210_col041">Kho-Vị trí-SL tồn kho\nSố lô</string>
+    <string name="qr210_col041">Kho-Vị trí-SL\ntồn kho\nSố lô</string>
     <string name="qr210_col05">Số lượng\nĐơn vị</string>
     <string name="qr210_col06">Quét phát liệu</string>
     <string name="qr210_col07">Tên SP\nQuy cách</string>
@@ -158,7 +158,7 @@
     <string name="r211_kho">Kho</string>
     <string name="r211_vtri">Vị trí</string>
     <string name="r211_mvl">Mã VL</string>
-    <string name="r211_antoan">Lượng an toàn</string>
+    <string name="r211_antoan">Lượng AT</string>
     <string name="r211_sl">Tồn kho</string>
 
     <string name="r211_btn1">Tra tìm</string>

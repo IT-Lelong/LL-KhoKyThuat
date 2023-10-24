@@ -185,7 +185,7 @@
             android:id="@+id/ln2_3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:orientation="horizontal">
 
             <TextView
@@ -234,7 +234,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8"
+            android:layout_weight="7.5"
             android:background="#A9EDBB">
 
             <ListView

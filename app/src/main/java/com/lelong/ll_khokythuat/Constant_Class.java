@@ -1,8 +1,8 @@
 package com.lelong.ll_khokythuat;
 
 public class Constant_Class {
-    public static final String UpdateName = "KhoKyThuat";
-    public static final String Update_serverAPK = "KhoKyThuat.apk";
+    public static final String UpdateName = "KHOKYTHUAT";
+    public static final String Update_serverAPK = "KHOKYTHUAT.apk";
     //public static final String Package_Name = "com.lelong.ll_khokythuat";
     public static final String server = "PHP";
 

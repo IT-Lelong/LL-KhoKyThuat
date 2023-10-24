@@ -59,7 +59,7 @@
         <activity android:name=".QR210.Main.qr210_check" />
         <activity
             android:name=".QR210.Main.qr210"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".QR210.Main.qr210_vt_view"
             android:screenOrientation="fullSensor" />
